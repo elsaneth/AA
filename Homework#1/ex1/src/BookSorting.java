@@ -1,29 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookSorting {
-    static int[] bubbleSort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 1; j < (arr.length - i); j++) {
-                if (arr[j - 1] > arr[j]) {
-                    int temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
+    public static void main(String[] args) {
+        List<Book> bookList = new ArrayList<>();
+
+        bookList.add(new Book("Book 1", "Author 1", 20));
+        bookList.add(new Book("Book 2", "Author 2", 22.5));
+        bookList.add(new Book("Book 3", "Author 3", 17));
+
+        System.out.println("Before sorting:");
+        bookList.forEach(Book::printBook);
+
+        for (int i = 0; i < bookList.size(); i++) {
+            for (int j = 1; j < (bookList.size() - i); j++) {
+                if (bookList.get(j - 1).height > bookList.get(j).height) {
+                    Book temp = bookList.get(j - 1);
+                    bookList.set(j - 1, bookList.get(j));
+                    bookList.set(j, temp);
                 }
             }
         }
-        return arr;
-    }
-    public static void main(String[] args) {
-        int[] bookHeightList ={10, 15, 14, 23, 12};
 
-        System.out.println("Array Before Bubble Sort");
-        for (int j : bookHeightList) {
-            System.out.print(j + " ");
-        }
-        System.out.println();
-
-        int[] sortedBookList = bubbleSort(bookHeightList);
-        System.out.println("Array After Bubble Sort");
-        for (int j : sortedBookList) {
-            System.out.print(j + " ");
-        }
+        System.out.println("After sorting:");
+        bookList.forEach(Book::printBook);
     }
 }
