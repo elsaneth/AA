@@ -3,10 +3,10 @@ import time
 stack = []
 
 def push(element):
-    start_time = time.perf_counter()  # Mõõda algusaeg
+    start_time = time.perf_counter()
     stack.append(element)
-    end_time = time.perf_counter()    # Mõõda lõppaeg
-    elapsed_time = end_time - start_time  # Leiame kulunud aja
+    end_time = time.perf_counter()
+    elapsed_time = end_time - start_time
     return elapsed_time
 
 def pop():
