@@ -1,7 +1,8 @@
 # Puu ja graafid
 
 ## Puu:
-![image](https://github.com/elsaneth/AA/assets/106624129/53af3c10-cd02-4943-955b-446e322f89eb)
+![image](https://github.com/elsaneth/AA/assets/106624129/61d31f40-eb5e-4c07-9344-64408a23b72c)
+
 
 ## Puu vs graaf
 Puud ja graafid on mõlemad graafid.
